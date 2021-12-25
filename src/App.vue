@@ -40,10 +40,10 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: rgba(254, 44, 85, 1.0);
 
   &:hover {
-    color: rgba(254, 44, 85, 1.0);
+    text-decoration: underline;
   }
 }
 

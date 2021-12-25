@@ -1,16 +1,17 @@
-import http from '@/api-client'
+import api from '@/api-client'
+import { AxiosResponse } from 'axios'
 
 class TiktokDataService {
-  getTrandingFeed (): Promise<any> {
-    return http.get('/trending/feed')
+  getTrandingFeed (): Promise<AxiosResponse> {
+    return api.get('/trending/feed')
   }
 
-  getUserInfo (name: string): Promise<any> {
-    return http.get(`user/info/${name}`)
+  getUserInfo (name: string): Promise<AxiosResponse> {
+    return api.get(`user/info/${name}`)
   }
 
-  getUserFeed (name: string): Promise<any> {
-    return http.get(`user/feed/${name}`)
+  getUserFeed (name: string): Promise<AxiosResponse> {
+    return api.get(`user/feed/${name}`)
   }
 }
 

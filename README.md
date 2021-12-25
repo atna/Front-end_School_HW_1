@@ -1,4 +1,4 @@
-# tik
+# tiktuk
 
 ## Project setup
 ```

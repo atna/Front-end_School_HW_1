@@ -4,7 +4,7 @@
       <div class="tiktok-post__avatar">
         <router-link
           :to="`/profile/${post.authorMeta.name}`"
-          class="link"
+          class="tiktok-post__link"
         >
           <img
             :src="post.authorMeta.avatar"
@@ -18,7 +18,7 @@
           <div class="tiktok-post__nick-name">
             <router-link
               :to="`/profile/${post.authorMeta.name}`"
-              class="link"
+              class="tiktok-post__link"
             >
               {{ post.authorMeta.name }}
             </router-link>
@@ -140,6 +140,10 @@ export default defineComponent({
   &__user-name {
     margin-left: 8px;
     font-size: 14px;
+  }
+
+  &__link {
+    color: #000;
   }
 
   &__text {

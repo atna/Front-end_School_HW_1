@@ -48,13 +48,13 @@ export default defineComponent({
   },
   setup (props) {
     const followerCount = computed(() => {
-      return formatStatCount(props.stats.followerCount)
+      return formatStatCount(props.stats.followerCount || 0)
     })
     const followingCount = computed(() => {
-      return formatStatCount(props.stats.followingCount)
+      return formatStatCount(props.stats.followingCount || 0)
     })
     const heartCount = computed(() => {
-      return formatStatCount(props.stats.heartCount)
+      return formatStatCount(props.stats.heartCount || 0)
     })
 
     return {

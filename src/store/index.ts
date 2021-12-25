@@ -22,22 +22,34 @@ export default createStore({
   },
   actions: {
     async fetchTrandingFeed ({ commit }) {
-      const result = await tiktokDataService.getTrandingFeed()
-      const data: FeedItem[] = result.data
+      try {
+        const result = await tiktokDataService.getTrandingFeed()
+        const data: FeedItem[] = result.data
 
-      commit('SET_TRENDING_FEED', data)
+        commit('SET_TRENDING_FEED', data)
+      } catch (error) {
+        console.error(error)
+      }
     },
     async fetchUserInfo ({ commit }, name) {
-      const result = await tiktokDataService.getUserInfo(name)
-      const data: UserInfo = result.data
+      try {
+        const result = await tiktokDataService.getUserInfo(name)
+        const data: UserInfo = result.data
 
-      commit('SET_USER_INFO', data)
+        commit('SET_USER_INFO', data)
+      } catch (error) {
+        console.error(error)
+      }
     },
     async fetchUserFeed ({ commit }, name) {
-      const result = await tiktokDataService.getUserFeed(name)
-      const data: UserInfo = result.data
+      try {
+        const result = await tiktokDataService.getUserFeed(name)
+        const data: UserInfo = result.data
 
-      commit('SET_USER_FEED', data)
+        commit('SET_USER_FEED', data)
+      } catch (error) {
+        console.error(error)
+      }
     }
   },
   modules: {
